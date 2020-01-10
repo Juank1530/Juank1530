@@ -26,7 +26,7 @@ require("datos_conexion.php");
 //el usuario,la contraseña y el nombre de la bd
 $conexion= mysqli_connect($db_host,$db_usuario,$db_password);
 
-//Manejo para cuendo no se puede conectar a la BBDD
+//Manejo para cuando no se puede conectar a la BBDD
 if(mysqli_connect_errno()){
 
     echo ":/ Error al Conectar la base de datos. <br> Por favor consulte a su administrador";
@@ -40,7 +40,7 @@ mysqli_select_db($conexion,$db_nombre) or die ("No se ecuentra BBDD");
 //Integrar carateres latinos acentos.
 mysqli_set_charset($conexion,"utf8");
 
-//Se indica la consulta que se necesita utulizando los carecteres comdín delante y atrás para asegurar las búsquedas   
+//Se indica la consulta que se necesita utulizando los caracteres comodín delante y atrás para asegurar las búsquedas   
 $query="Insert into Productos(CÓDIGOARTÍCULO, SECCIÓN, NOMBREARTÍCULO, PRECIO, FECHA, IMPORTADO, PAÍSDEORIGEN) VALUES 
 ('$cod','$sec','$nom','$pre','$fec','$imp','$por')";
 
