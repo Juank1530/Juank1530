@@ -1,12 +1,19 @@
 <?php
 
+//Url with parameters to send ussing $_GET
+//http://192.168.10.192:90/farmalisto_co.php?page_ho=https://www.farmalisto.com.co/&page_ca=https://www.farmalisto.com.co/2078-dermocosmetica&page_pr=https://www.farmalisto.com.co/antisepticos/3401-comprar-agua-oxigenada-frasco-x-120-ml-precio-7702560000010.html
+
+
 //Variables to use
-$page_ho = 'https://www.farmalisto.com.co/';
-$page_ca = 'https://www.farmalisto.com.co/2078-dermocosmetica';
-$page_pr = 'https://www.farmalisto.com.co/antisepticos/3401-comprar-agua-oxigenada-frasco-x-120-ml-precio-7702560000010.html';
+
+//Here it gets its parameters throught url
+$page_ho = $_GET['page_ho'];
+$page_ca = $_GET['page_ca'];
+$page_pr = $_GET['page_pr'];
+$u_negocio = $_GET['u_negocio'];
+
 $strategy_MO = 'mobile';
 $strategy_DE = 'desktop';
-$u_negocio = 'CO Farmalisto';
 $home = 'Home';
 $category = 'Categoria';
 $product = 'Producto';
@@ -337,6 +344,33 @@ if ($ok_ho==false) {
     mysqli_stmt_close($resulset_ho);
 }
 
+//Insert data in DDBB Performance Home Page
+
+$query_per_ho = "INSERT INTO api_psi (
+    u_negocio,
+    fecha,
+    pagina,
+    movil,
+    ordenador)
+    VALUES(?, ?, ?, ?, ?)";
+    
+$resulset_per_ho=mysqli_prepare($conetion,$query_per_ho);
+
+$ok_per_ho=mysqli_stmt_bind_param($resulset_per_ho,"sssii", $u_negocio, $fecha, $home, $perfor_mo_ho,$perfor_de_ho);
+
+$ok_per_ho=mysqli_stmt_execute($resulset_per_ho);
+
+if ($ok_per_ho==false) {
+    echo 'Error al agregar resgistro a la BBDD <br>';
+    mysqli_stmt_close($resulset_per_ho);
+}else{
+
+    mysqli_stmt_close($resulset_per_ho);
+}
+
+//End
+
+
 //Insert Data in DDBB Category page 
 
 $query_ca = "INSERT INTO api_fb (
@@ -366,6 +400,33 @@ if ($ok_ca==false) {
 
     mysqli_stmt_close($resulset_ca);
 }
+
+//Insert data in DDBB Performance Category Page
+
+$query_per_ca = "INSERT INTO api_psi (
+    u_negocio,
+    fecha,
+    pagina,
+    movil,
+    ordenador)
+    VALUES(?, ?, ?, ?, ?)";
+    
+$resulset_per_ca=mysqli_prepare($conetion,$query_per_ca);
+
+$ok_per_ca=mysqli_stmt_bind_param($resulset_per_ca,"sssii", $u_negocio, $fecha, $category, $perfor_mo_ca,$perfor_de_ca);
+
+$ok_per_ca=mysqli_stmt_execute($resulset_per_ca);
+
+if ($ok_per_ca==false) {
+    echo 'Error al agregar resgistro a la BBDD <br>';
+    mysqli_stmt_close($resulset_per_ca);
+}else{
+
+    mysqli_stmt_close($resulset_per_ca);
+}
+
+//End
+
 
 //Insert Data in DDBB Product page
 
@@ -398,8 +459,35 @@ if ($ok_pr==false) {
     mysqli_stmt_close($resulset_pr);
 }
 
+//Insert data in DDBB Performance Category Page
+
+$query_per_pr = "INSERT INTO api_psi (
+    u_negocio,
+    fecha,
+    pagina,
+    movil,
+    ordenador)
+    VALUES(?, ?, ?, ?, ?)";
+    
+$resulset_per_pr=mysqli_prepare($conetion,$query_per_pr);
+
+$ok_per_pr=mysqli_stmt_bind_param($resulset_per_pr,"sssii", $u_negocio, $fecha, $product, $perfor_mo_pr,$perfor_de_pr);
+
+$ok_per_pr=mysqli_stmt_execute($resulset_per_pr);
+
+if ($ok_per_pr==false) {
+    echo 'Error al agregar resgistro a la BBDD <br>';
+    mysqli_stmt_close($resulset_per_pr);
+}else{
+
+    mysqli_stmt_close($resulset_per_pr);
+}
+
+//End
+
 //Clossing conection with DDBB
 mysqli_close($conetion);
+
 }
 
 

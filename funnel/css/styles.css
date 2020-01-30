@@ -1,0 +1,38 @@
+h1 {
+	background: #3a9b37;
+	color: #ffffff;
+	font-family: "Roboto",Arial,sans-serif,helvetica;
+}
+
+p {
+	font-family: "Roboto",Arial,sans-serif,helvetica;
+	font-size: 16px; 
+}
+
+.btn {
+	
+	font-size: 20px;
+	background: #3a9b37;
+	border-radius: 13px;
+	border: 1px;
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 5px #3a9b37;
+	cursor: pointer;
+	 
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+.form {
+	
+	width: 99%;
+	max-width:500px; 
+	margin: auto;	
+	
+}
+		
