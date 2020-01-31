@@ -10,41 +10,36 @@
 <body>
 
 	<div class="tittle">
-		<h1>Funnel de Coversión Proyectos Farmalatam</h1>
+		<h1>Funnel de Coversión Proyectos Farmalatam <img style="float: right; margin: 0px 15px 15px 0px;" id="logo" src="../images/farma_co.png" width="126"></h1>
 	</div>
 
 	<div class="parraf">
 		<p>Por favor selecciona el proyecto del cual se requiere ingresar
-			los datos</p>
+			los datos</p><br>
 	</div>
 
 	<div class="form">
-		<form action="#" method="post">
+		<form action="../controller/registro.php" method="get">
 			
-			<button class="btn" type="submit">
-				<img src="../images/farma_co.png" alt="" />
+			<button class="btn" type="submit" name="farma_co" value="farma_co">
+				<img src="../images/farma_co.png" alt="farma_co" />
 			</button>
-			<button class="btn" type="submit">
-				<img src="../images/farma_mx.png" alt="" />
+			<button class="btn" type="submit" name="farma_mx">
+				<img src="../images/farma_mx.png" alt="farma_mx" />
 			</button>
-			<button class="btn" type="submit">
-				<img src="../images/cafam.png" alt="" />
+			<button class="btn" type="submit" name="cafam">
+				<img src="../images/cafam.png" alt="cafam" />
 			</button>
-			<button class="btn" class="btn" type="submit">
-				<img src="../images/abbott.png" alt="" />
+			<button class="btn" class="btn" type="submit" name="abbott">
+				<img src="../images/abbott.png" alt="abbott" />
 			</button>
-			<button class="btn" type="submit">
-				<img src="../images/care24.png" alt="" />
+			<button class="btn" type="submit" name="care_co">
+				<img src="../images/care24.png" alt="care_co" />
 			</button>
 			
 		</form>
 	</div>
-
-
-
+	
 
 </body>
 </html>
-
-<!-- <input id="name" type="text" class="form-control" name="name" placeholder="Nombre" value="<?php if (! $sent && isset($name)) echo $name ?>"/>
- -->

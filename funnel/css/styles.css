@@ -2,11 +2,13 @@ h1 {
 	background: #3a9b37;
 	color: #ffffff;
 	font-family: "Roboto",Arial,sans-serif,helvetica;
+	font-weight: bold;
 }
 
 p {
 	font-family: "Roboto",Arial,sans-serif,helvetica;
-	font-size: 16px; 
+	font-size: 25px;
+	font-weight: bold; 
 }
 
 .btn {
@@ -35,4 +37,29 @@ img {
 	margin: auto;	
 	
 }
+
+.parraf {
+	text-align: center;
+}
+
+#logo {
+	text-align: right; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
