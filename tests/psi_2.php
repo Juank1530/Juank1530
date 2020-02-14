@@ -1,26 +1,13 @@
 <?php
 
 
-//Url with parameters to send ussing $_GET
-//http://192.168.10.192:90/psi_1.php?u_negocio=farmalisto_co&page_ho=https://www.farmalisto.com.co/&page_ca=https://www.farmalisto.com.co/2078-dermocosmetica&page_pr=https://www.farmalisto.com.co/antisepticos/3401-comprar-agua-oxigenada-frasco-x-120-ml-precio-7702560000010.html
+//Url with parameters to send ussing $_GET and argv to send its paraemters 
+//http://192.168.10.192:90/psi_1.php https://www.farmalisto.com.co/ https://www.farmalisto.com.co/2078-dermocosmetica https://www.farmalisto.com.co/antisepticos/3401-comprar-agua-oxigenada-frasco-x-120-ml-precio-7702560000010.html farmalisto_co
 
-
-//Variables to use
-
-//Here it gets its parameters throught url
-$page_ho = $_GET['page_ho'];
-$page_ca = $_GET['page_ca'];
-$page_pr = $_GET['page_pr'];
-$u_negocio = $_GET['u_negocio'];
-
-// foreach ($argv as $key ) {
-//     echo "$key \n";
-// }
-
-// $page_ho = $argv[1];
-// $page_ca = $argv[2];
-// $page_pr = $argv[3];
-// $u_negocio = $argv[4];
+$page_ho = $argv[1];
+$page_ca = $argv[2];
+$page_pr = $argv[3];
+$u_negocio = $argv[4];
 
 $strategy_MO = 'mobile';
 $strategy_DE = 'desktop'; 
@@ -157,145 +144,145 @@ $ttidv_mo_pr = $data_mo_pr["lighthouseResult"]["audits"]["interactive"]["display
 
 //Showing Results
 
-echo $page_ho . '<br>';
+// echo $page_ho . '<br>';
 
-echo "<pre>";
-echo '<br>' . 'TTFB Desktop ';
-print_r($ttbf_de_ho);
-echo '<br>' . 'TTFBDV ';
-print_r($ttbfdv_de_ho);
-echo '<br>' . 'TTFB Mobile ';
-print_r($ttbf_mo_ho);
-echo '<br>' . 'TTFBDV ';
-print_r($ttbfdv_mo_ho);
+// echo "<pre>";
+// echo '<br>' . 'TTFB Desktop ';
+// print_r($ttbf_de_ho);
+// echo '<br>' . 'TTFBDV ';
+// print_r($ttbfdv_de_ho);
+// echo '<br>' . 'TTFB Mobile ';
+// print_r($ttbf_mo_ho);
+// echo '<br>' . 'TTFBDV ';
+// print_r($ttbfdv_mo_ho);
 
-echo '<br>' . 'performance Desktop ';
-print_r($perfor_de_ho);
-echo '<br>' . 'performance Mobile ';
-print_r($perfor_mo_ho);
+// echo '<br>' . 'performance Desktop ';
+// print_r($perfor_de_ho);
+// echo '<br>' . 'performance Mobile ';
+// print_r($perfor_mo_ho);
 
-echo '<br>' . 'first-contentful-paint Desktop ';
-print_r($fcfp_de_ho);
-echo '<br>' . 'first-contentful-paintDV ';
-print_r($fcfpdv_de_ho);
-echo '<br>' . 'first-contentful-paint Mobile ';
-print_r($fcfp_mo_ho);
-echo '<br>' . 'first-contentful-paintDV ';
-print_r($fcfpdv_mo_ho);
+// echo '<br>' . 'first-contentful-paint Desktop ';
+// print_r($fcfp_de_ho);
+// echo '<br>' . 'first-contentful-paintDV ';
+// print_r($fcfpdv_de_ho);
+// echo '<br>' . 'first-contentful-paint Mobile ';
+// print_r($fcfp_mo_ho);
+// echo '<br>' . 'first-contentful-paintDV ';
+// print_r($fcfpdv_mo_ho);
 
-echo '<br>' . 'first-meaningful-paint Desktop ';
-print_r($fmfp_de_ho);
-echo '<br>' . 'first-meaningful-paintDV ';
-print_r($fmfpdv_de_ho);
-echo '<br>' . 'first-meaningful-paint Mobile ';
-print_r($fmfp_mo_ho);
-echo '<br>' . 'first-meaningful-paintDV ';
-print_r($fmfpdv_mo_ho);
+// echo '<br>' . 'first-meaningful-paint Desktop ';
+// print_r($fmfp_de_ho);
+// echo '<br>' . 'first-meaningful-paintDV ';
+// print_r($fmfpdv_de_ho);
+// echo '<br>' . 'first-meaningful-paint Mobile ';
+// print_r($fmfp_mo_ho);
+// echo '<br>' . 'first-meaningful-paintDV ';
+// print_r($fmfpdv_mo_ho);
 
-echo '<br>' . 'time-to-interactive Desktop';
-print_r($tti_de_ho);
-echo '<br>' . 'time-to-interactiveDV ';
-print_r($ttidv_de_ho);
-echo '<br>' . 'time-to-interactive Mobile ';
-print_r($tti_mo_ho);
-echo '<br>' . 'time-to-interactiveDV ';
-print_r($ttidv_mo_ho);
+// echo '<br>' . 'time-to-interactive Desktop';
+// print_r($tti_de_ho);
+// echo '<br>' . 'time-to-interactiveDV ';
+// print_r($ttidv_de_ho);
+// echo '<br>' . 'time-to-interactive Mobile ';
+// print_r($tti_mo_ho);
+// echo '<br>' . 'time-to-interactiveDV ';
+// print_r($ttidv_mo_ho);
 
-echo "</pre>";
-
-
-echo '<br>' . $page_ca . '<br>';
-
-echo "<pre>";
-echo '<br>' . 'TTFB Desktop ';
-print_r($ttbf_de_ca);
-echo '<br>' . 'TTFBDV ';
-print_r($ttbfdv_de_ca);
-echo '<br>' . 'TTFB Mobile ';
-print_r($ttbf_mo_ca);
-echo '<br>' . 'TTFBDV ';
-print_r($ttbfdv_mo_ca);
-
-echo '<br>' . 'performance Desktop ';
-print_r($perfor_de_ca);
-echo '<br>' . 'performance Mobile ';
-print_r($perfor_mo_ca);
-
-echo '<br>' . 'first-contentful-paint Desktop ';
-print_r($fcfp_de_ca);
-echo '<br>' . 'first-contentful-paintDV ';
-print_r($fcfpdv_de_ca);
-echo '<br>' . 'first-contentful-paint Mobile ';
-print_r($fcfp_mo_ca);
-echo '<br>' . 'first-contentful-paintDV ';
-print_r($fcfpdv_mo_ca);
-
-echo '<br>' . 'first-meaningful-paint Desktop ';
-print_r($fmfp_de_ca);
-echo '<br>' . 'first-meaningful-paintDV ';
-print_r($fmfpdv_de_ca);
-echo '<br>' . 'first-meaningful-paint Mobile ';
-print_r($fmfp_mo_ca);
-echo '<br>' . 'first-meaningful-paintDV ';
-print_r($fmfpdv_mo_ca);
-
-echo '<br>' . 'time-to-interactive Desktop';
-print_r($tti_de_ca);
-echo '<br>' . 'time-to-interactiveDV ';
-print_r($ttidv_de_ca);
-echo '<br>' . 'time-to-interactive Mobile ';
-print_r($tti_mo_ca);
-echo '<br>' . 'time-to-interactiveDV ';
-print_r($ttidv_mo_ca);
-
-echo "</pre>";
+// echo "</pre>";
 
 
-echo '<br>' . $page_pr . '<br>';
+// echo '<br>' . $page_ca . '<br>';
 
-echo "<pre>";
-echo '<br>' . 'TTFB Desktop ';
-print_r($ttbf_de_pr);
-echo '<br>' . 'TTFBDV ';
-print_r($ttbfdv_de_pr);
-echo '<br>' . 'TTFB Mobile ';
-print_r($ttbf_mo_pr);
-echo '<br>' . 'TTFBDV ';
-print_r($ttbfdv_mo_pr);
+// echo "<pre>";
+// echo '<br>' . 'TTFB Desktop ';
+// print_r($ttbf_de_ca);
+// echo '<br>' . 'TTFBDV ';
+// print_r($ttbfdv_de_ca);
+// echo '<br>' . 'TTFB Mobile ';
+// print_r($ttbf_mo_ca);
+// echo '<br>' . 'TTFBDV ';
+// print_r($ttbfdv_mo_ca);
 
-echo '<br>' . 'performance Desktop ';
-print_r($perfor_de_pr);
-echo '<br>' . 'performance Mobile ';
-print_r($perfor_mo_pr);
+// echo '<br>' . 'performance Desktop ';
+// print_r($perfor_de_ca);
+// echo '<br>' . 'performance Mobile ';
+// print_r($perfor_mo_ca);
 
-echo '<br>' . 'first-contentful-paint Desktop ';
-print_r($fcfp_de_pr);
-echo '<br>' . 'first-contentful-paintDV ';
-print_r($fcfpdv_de_pr);
-echo '<br>' . 'first-contentful-paint Mobile ';
-print_r($fcfp_mo_pr);
-echo '<br>' . 'first-contentful-paintDV ';
-print_r($fcfpdv_mo_pr);
+// echo '<br>' . 'first-contentful-paint Desktop ';
+// print_r($fcfp_de_ca);
+// echo '<br>' . 'first-contentful-paintDV ';
+// print_r($fcfpdv_de_ca);
+// echo '<br>' . 'first-contentful-paint Mobile ';
+// print_r($fcfp_mo_ca);
+// echo '<br>' . 'first-contentful-paintDV ';
+// print_r($fcfpdv_mo_ca);
 
-echo '<br>' . 'first-meaningful-paint Desktop ';
-print_r($fmfp_de_pr);
-echo '<br>' . 'first-meaningful-paintDV ';
-print_r($fmfpdv_de_pr);
-echo '<br>' . 'first-meaningful-paint Mobile ';
-print_r($fmfp_mo_pr);
-echo '<br>' . 'first-meaningful-paintDV ';
-print_r($fmfpdv_mo_pr);
+// echo '<br>' . 'first-meaningful-paint Desktop ';
+// print_r($fmfp_de_ca);
+// echo '<br>' . 'first-meaningful-paintDV ';
+// print_r($fmfpdv_de_ca);
+// echo '<br>' . 'first-meaningful-paint Mobile ';
+// print_r($fmfp_mo_ca);
+// echo '<br>' . 'first-meaningful-paintDV ';
+// print_r($fmfpdv_mo_ca);
 
-echo '<br>' . 'time-to-interactive Desktop';
-print_r($tti_de_pr);
-echo '<br>' . 'time-to-interactiveDV ';
-print_r($ttidv_de_pr);
-echo '<br>' . 'time-to-interactive Mobile ';
-print_r($tti_mo_pr);
-echo '<br>' . 'time-to-interactiveDV ';
-print_r($ttidv_mo_pr);
+// echo '<br>' . 'time-to-interactive Desktop';
+// print_r($tti_de_ca);
+// echo '<br>' . 'time-to-interactiveDV ';
+// print_r($ttidv_de_ca);
+// echo '<br>' . 'time-to-interactive Mobile ';
+// print_r($tti_mo_ca);
+// echo '<br>' . 'time-to-interactiveDV ';
+// print_r($ttidv_mo_ca);
 
-echo "</pre>";
+// echo "</pre>";
+
+
+// echo '<br>' . $page_pr . '<br>';
+
+// echo "<pre>";
+// echo '<br>' . 'TTFB Desktop ';
+// print_r($ttbf_de_pr);
+// echo '<br>' . 'TTFBDV ';
+// print_r($ttbfdv_de_pr);
+// echo '<br>' . 'TTFB Mobile ';
+// print_r($ttbf_mo_pr);
+// echo '<br>' . 'TTFBDV ';
+// print_r($ttbfdv_mo_pr);
+
+// echo '<br>' . 'performance Desktop ';
+// print_r($perfor_de_pr);
+// echo '<br>' . 'performance Mobile ';
+// print_r($perfor_mo_pr);
+
+// echo '<br>' . 'first-contentful-paint Desktop ';
+// print_r($fcfp_de_pr);
+// echo '<br>' . 'first-contentful-paintDV ';
+// print_r($fcfpdv_de_pr);
+// echo '<br>' . 'first-contentful-paint Mobile ';
+// print_r($fcfp_mo_pr);
+// echo '<br>' . 'first-contentful-paintDV ';
+// print_r($fcfpdv_mo_pr);
+
+// echo '<br>' . 'first-meaningful-paint Desktop ';
+// print_r($fmfp_de_pr);
+// echo '<br>' . 'first-meaningful-paintDV ';
+// print_r($fmfpdv_de_pr);
+// echo '<br>' . 'first-meaningful-paint Mobile ';
+// print_r($fmfp_mo_pr);
+// echo '<br>' . 'first-meaningful-paintDV ';
+// print_r($fmfpdv_mo_pr);
+
+// echo '<br>' . 'time-to-interactive Desktop';
+// print_r($tti_de_pr);
+// echo '<br>' . 'time-to-interactiveDV ';
+// print_r($ttidv_de_pr);
+// echo '<br>' . 'time-to-interactive Mobile ';
+// print_r($tti_mo_pr);
+// echo '<br>' . 'time-to-interactiveDV ';
+// print_r($ttidv_mo_pr);
+
+// echo "</pre>";
 
 //Calling file to conect with DDBB
 require_once('conectionps.php');
