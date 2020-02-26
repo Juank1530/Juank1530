@@ -13,21 +13,12 @@ $page_ca = $_GET['page_ca'];
 $page_pr = $_GET['page_pr'];
 $u_negocio = $_GET['u_negocio'];
 
-// foreach ($argv as $key ) {
-//     echo "$key \n";
-// }
-
-// $page_ho = $argv[1];
-// $page_ca = $argv[2];
-// $page_pr = $argv[3];
-// $u_negocio = $argv[4];
-
 $strategy_MO = 'mobile';
 $strategy_DE = 'desktop'; 
 $home = 'Home';
 $category = 'Categoria';
 $product = 'Producto';
-$fecha = date('Y-m-d');
+$fecha = date('Y-m-d G:i');
 $id = '';
 
 //Consuming API of three pages 
