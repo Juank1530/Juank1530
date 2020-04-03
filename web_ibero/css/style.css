@@ -1,0 +1,19 @@
+body{
+    background: url(../pictures/backlit-dark-dawn-environment-289367.jpg);
+    /* background: cover; para que la imagen tome todo el fondo  */
+    background-attachment: fixed;/* El fondo es fijo y solo se mueve el contenido   */
+    text-align: center; /* Centrar los elementos */
+}
+
+h1,h2,h3{
+
+    color: white; /* Color de la letra */
+    font-size: 50px; /* tamaño de la letra */
+}
+
+p{
+    color: white;
+    font-size: 20px;
+    background: blue; /* trasfondo del texto */
+}
+
