@@ -1,0 +1,10 @@
+var ruta = window.location;
+document.write("Estás en: " + ruta);
+document.write("<br>Hello!!");
+console.log("Este es un mensaje de prueba");
+console.log(ruta);
+console.log(window);
+console.log(document);
+console.log(navigator);
+console.log(console);
+alert("Sí funciona!!");
