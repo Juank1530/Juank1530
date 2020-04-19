@@ -27,18 +27,3 @@
             </div>
         </div>
     </header>
-
-
-
-<!-- <body>
-    <div>
-        <img class="derecha image" src="image/care-24-logo.jpg" alt="">
-    </div>
-    <header>
-        <div class="contenedor">
-            <div class="logo">
-                <p><a href="#">BI MANAGER CLINIC CARE24</a></p>
-            </div>
-        </div>
-
-    </header> -->
