@@ -3,11 +3,11 @@
 import jwt
 import time
 
-METABASE_SITE_URL = "http://192.168.10.192:3000"
-METABASE_SECRET_KEY = "456d8d6804176624d77e272057a78dfdc3ba8fccbce04bf519679d2518d226ae"
+METABASE_SITE_URL = "http://190.61.25.48:3000"
+METABASE_SECRET_KEY = "315bea17cb8b8173934e236a6fedf7e4cf2c6c67600a4105ae098dc28942d28d"
 
 payload = {
-  "resource": {"dashboard": 84},
+  "resource": {"dashboard": 20},
   "params": {
     
   },
