@@ -1,0 +1,41 @@
+// CITAS
+// Crear cita
+// Datos enviados
+{
+    "idPatient": "00001",
+    "entity": "PARTICULAR",
+    "agreement": "PARTICULAR",
+    "documentMedical": "80926354",
+    "dateAppointment": "2019-11-27",
+    "hourAppointment": "13:00",
+    "cityAppointment": "011001",
+    "addressAppointment": "Cra 36A 22 68",
+    "cupsService": "082600",
+    "Observation": "Paciente refiere dolor de cabeza fuerte",
+    "payMethod": "001", // metodo de pago manager
+    "agent": "80921396", //cedula usuario manager
+    "payType": "CREDITO", //id tipo de pago manager
+    "headquarters": "001" //id sede manager
+}
+
+
+//Actualizar cita:
+//Datos enviados
+{
+    "idAppointment": "00001",
+    "data": {
+        "idPatient": "00002",
+        "entity": "FARMALISTO",
+        "agreement": "FARMALISTO",
+        "documentMedical": "51900365",
+        "dateAppointment": "2019-11-29",
+        "hourAppointment": "08:00",
+        "cityAppointment": "011001",
+        "addressAppointment": "Cra 36A 22 68",
+        "Observation": "Paciente pide reprogramación",
+        "payMethod": "001", // metodo de pago manager
+        "agent": "80921396", //cedula usuario manager
+        "payType": "CREDITO", //id tipo de pago manager
+        "headquarters": "001" //id sede manager
+    }
+}
