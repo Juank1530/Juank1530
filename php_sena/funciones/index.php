@@ -8,6 +8,7 @@
 </head>
 
 <?php
+//Se hace el llamado al archivo con la función
 require_once './biblioteca.php';
 ?>
 
@@ -19,9 +20,11 @@ require_once './biblioteca.php';
         <p>Por favor selecione la operación que desea realizar:</p>
 
     </div>
-
+    <!-- Se crea un formulario para selecionar el operador e ingresar los valores  -->
     <div class="Form">
+        <!-- Acá se hace referencia a la misma página para trabajar con los datos -->
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="">
+            <!-- Se crea la lista para elegir el operador -->
             <select name="myselect" id="myselect">
                 <option value="default">Seleccione un valor</option>
                 <option value="Suma">Suma</option>
@@ -30,6 +33,7 @@ require_once './biblioteca.php';
                 <option value="Division">División</option>
             </select>
             <br>
+            <!-- Etiqutas y text box para ingreso de los valores -->
             <label for="N1">Ingrese el primer digito</label>
             <input name="n1" type="number" placeholder="Ingrese solo números">
             <br>
@@ -43,41 +47,23 @@ require_once './biblioteca.php';
     <div class="resulset">
 
         <?php
+        /**
+         * Desarollado por 
+         * Juan Carlos Támara Rosas
+         * Desarrollo web con php
+         * Uso de funciones
+         */
+
+        //Se validad que se hayan enviado los datos
 
         if ($_GET['submit']) {
-            operacion($_GET['n1'], $_GET['n2'], $_GET['myselect']);
-        } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //Se llama a la función con los respectivos parametros 
+            operaciones($_GET['n1'], $_GET['n2'], $_GET['myselect']);
+        }
 
         ?>
 
-
-
     </div>
-
-
-
-
-
-
-
-
-
 
 </body>
 
