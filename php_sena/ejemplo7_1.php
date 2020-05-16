@@ -14,6 +14,9 @@
              * predefinida
              */
             echo $_SERVER['SERVER_SOFTWARE'];
+
+
+
             ?>
         </p>    
     </body>
