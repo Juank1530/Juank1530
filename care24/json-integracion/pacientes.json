@@ -1,0 +1,104 @@
+//EN CASO DE SER MENOR DE EDAD 
+{
+    "firstName": "Juan",
+    "secondName": "David",
+    "surname": "Martinez",
+    "secondSurname": "Hernanadez",
+    "birthDate": "2019-05-24",
+    "gender": "Masculino",
+    "typeIdentification": "NUIP",
+    "numberIdentification": "12345678",
+    "cityResidence": "011001",
+    "addressResidence": "Cra 15 bis 39 09",
+    "email": "jaime.mh65@gmail.com",
+    "cellphone": "3202204508",
+    "entity": "99999999",
+    "regimen": "4",
+    "agreement": "0000000001",
+    "agent": "80921368", //Documento del creador del paciente
+    "liable": {
+        "firstName": "Jaime",
+        "secondName": "",
+        "surname": "Martinez",
+        "secondSurname": "Rodriguez",
+        "birthDate": "1974-06-19",
+        "typeIdentification": "Cedula",
+        "numberIdentification": "123456789",
+        "personalRelation": "Padre",
+        "gender": "Masculino",
+        "cityResidence": "011001",
+        "addressResidence": "Cra 15 bis 39 09",
+        "email": "jaime.mh65@gmail.com",
+        "cellphone": "3202204508",
+        "entity": "99999999",
+        "regimen": "4",
+        "agreement": "0000000001",
+        "agent": "80921368" //Documento del creador del paciente
+    }
+
+}
+//EN CASO DE SER MAYOR DE EDAD 
+{
+    "firstName": "Jaime",
+    "secondName": "",
+    "surname": "Martinez",
+    "secondSurname": "Rodriguez",
+    "birthDate": "1974-06-19",
+    "typeIdentification": "Cedula",
+    "numberIdentification": "12345678",
+    "gender": "Masculino",
+    "cityResidence": "011001",
+    "addressResidence": "Cra 15 bis 39 09",
+    "email": "jaime.mh65@gmail.com",
+    "cellphone": "3202204508",
+    "entity": "99999999",
+    "regimen": "4",
+    "agreement": "0000000001",
+    "liable": {},
+    "agent": "80921368"
+}
+
+//Datos recibidos 
+{
+    "status": 201,
+    "message": "Paciente creado exitosamente.",
+    "data": {
+        "idPatient": "00001"
+    }
+} {
+    "status": 200,
+    "message": "Paciente ya se encuentra registrado.",
+    "data": {
+        "idPatient": "00001"
+    }
+}
+
+//Actualizar paciente:
+//Datos enviados 
+{
+    "idPatient": "00001",
+    "data": {
+        "firstName": "Juan",
+        "secondName": "David",
+        "surname": "Martinez",
+        "secondSurname": "Hernandez",
+        "birthDate": "2019-05-24",
+        "personalRelation": "Padre",
+        "gender": "Masculino",
+        "typeIdentification": "NUIP",
+        "numberIdentification": "12345678",
+        "cityResidence": "011001",
+        "addressResidence": "Cra 15 bis 39 09",
+        "email": "jaime.mh65@gmail.com",
+        "cellphone": "3202204508",
+        "entity": "999999999",
+        "regimen": "4",
+        "agreement": "0000000001",
+        "agent": "80921368"
+    }
+}
+//Datos recibidos
+{
+    "status": 200,
+    "message": "Paciente actualizado exitosamente."
+}
