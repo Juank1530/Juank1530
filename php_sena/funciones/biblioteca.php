@@ -10,7 +10,7 @@
 
 
 // Acá se define la función con los parametros que recibe 
-function operaciones($num1, $num2, $Operador)
+function operaciones($num1, $num2, $Operador)//Se puede modificar la cantidad de parametros 
 { 
         //Acá se validad que los valores no estén vacios 
         if (is_null($num1) || is_null($num2)) {
